@@ -1,0 +1,71 @@
+header {
+  background-color: #fff;
+  height: 100px;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 36pt;
+  padding: 15px;
+  box-shadow: 5px 5px 5px #635550;
+  color: #635550;
+}
+
+body {
+  background-color: #dce4e9;
+}
+
+table {
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
+
+td {
+  padding: 7px;
+  width: 25%;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.button {
+  height: 40px;
+  width: 100%;
+  border: 2.5px outset;
+  outline: none;
+  font-family: "PT Mono", monospace;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+.clear {
+  background-color: #ba3232;
+  border-color: #ba3232;
+}
+
+.number {
+  background-color: #8e8181;
+  border-color: #8e8181;
+}
+
+#calcbody {
+  width: 400px;
+  margin: 100px auto 100px auto;
+  padding: 35px;
+  border: 2px outset #97AEBD;
+  background-color: #fff;
+}
+
+#display {
+  height: 40px;
+  padding: 10px;
+  margin: 0px 7px 0px 7px;
+  border: 1px inset #ccc;
+  background-color: #fff9e6;
+  font-family: "PT Mono", monospace;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: right;
+}

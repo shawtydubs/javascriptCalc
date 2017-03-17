@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|PT+Mono" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="calc.js"></script>
+</head>
+<body ng-app='calcApp' ng-controller='numController'>
+  <header>Javascript Calculator</header>
+  <div id="calcbody" class="rounded">
+    <div id="display" class="rounded">{{ displayNum.length == 0 ? numTotal : displayNum.join('') }}</div>
+    <table id="buttons">
+      <tr>
+        <td><input class="button rounded clear" type="submit" value="AC" ng-click='allClear()'></td>
+        <td><input class="button rounded clear" type="submit" value="C" ng-click='clearOne()'></td>
+        <td colspan="2"><input class="button rounded number" type="submit" value="=" ng-click='equals()'></td>
+      </tr>
+      <tr>
+        <td><input class="button rounded number" type="submit" value="7" ng-click='makeNum("7")'></td>
+        <td><input class="button rounded number" type="submit" value="8" ng-click='makeNum("8")'></td>
+        <td><input class="button rounded number" type="submit" value="9" ng-click='makeNum("9")'></td>
+        <td><input class="button rounded number" type="submit" value="/" ng-click='divNum()'></td>
+      </tr>
+      <tr>
+        <td><input class="button rounded number" type="submit" value="6" ng-click='makeNum("6")'></td>
+        <td><input class="button rounded number" type="submit" value="5" ng-click='makeNum("5")'></td>
+        <td><input class="button rounded number" type="submit" value="4" ng-click='makeNum("4")'></td>
+        <td><input class="button rounded number" type="submit" value="*" ng-click='multNum()'></td>
+      </tr>
+      <tr>
+        <td><input class="button rounded number" type="submit" value="3" ng-click='makeNum("3")'></td>
+        <td><input class="button rounded number" type="submit" value="2" ng-click='makeNum("2")'></td>
+        <td><input class="button rounded number" type="submit" value="1" ng-click='makeNum("1")'></td>
+        <td><input class="button rounded number" type="submit" value="-" ng-click='subNum()'></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input class="button rounded number" type="submit" value="0" ng-click='makeNum("0")'></td>
+        <td><input class="button rounded number" type="submit" value="." ng-click='makeNum(".")'></td>
+        <td><input class="button rounded number" type="submit" value="+" ng-click='addNum()'></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

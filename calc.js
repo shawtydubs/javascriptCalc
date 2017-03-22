@@ -42,9 +42,9 @@ angular.module('calcApp', []).controller('numController', function($scope) {
     }
 
     performOperation = function() {
-        if ($scope.numTotal == 0 || $scope.operation == '=') {
+        if ($scope.numTotal == 0) {
             $scope.numTotal = parseFloat($scope.displayNum.join(''));
-        } else {
+        } else if ($scope.operation != '=') {
             $scope.numTotal = calculateTotal($scope.numTotal, parseFloat($scope.displayNum.join('')));
         }
         $scope.displayNum = [];
